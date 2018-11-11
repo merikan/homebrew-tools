@@ -1,4 +1,4 @@
-class Gileaks < Formula
+class Gitleaks < Formula
   desc "Audit git repos for secrets"
   homepage "https://github.com/zricethezav/gitleaks"
   url "https://github.com/zricethezav/gitleaks/releases/download/v1.19.3/gitleaks-darwin-amd64"
