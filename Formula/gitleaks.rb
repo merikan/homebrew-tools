@@ -6,7 +6,7 @@ class Gitleaks < Formula
   sha256 "84396cef693dc064869789a6b56087085639d46beec3025a33bd626533e7534e"
 
   def install
-    bin.install "gitleaks"
+    bin.install "gitleaks-darwin-amd64" => "gitleaks"
   end
 
   test do
