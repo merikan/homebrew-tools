@@ -15,3 +15,7 @@ brew tap merikan/tools
 # install
 brew install gitleaks
 ```
+
+## License
+
+This project is licensed under the terms of the [MIT License](LICENSE).
