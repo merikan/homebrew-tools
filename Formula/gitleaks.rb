@@ -1,9 +1,9 @@
 class Gitleaks < Formula
   desc "Audit git repos for secrets"
   homepage "https://github.com/zricethezav/gitleaks"
-  url "https://github.com/zricethezav/gitleaks/releases/download/v1.22.0/gitleaks-darwin-amd64"
-  version "1.22.0"
-  sha256 "1bbf4c84e44b53795bbdacc49c5827e29f3188ec51c7886a5bae38a5b79e2331"
+  url "https://github.com/zricethezav/gitleaks/releases/download/v1.23.0/gitleaks-darwin-amd64"
+  version "1.23.0"
+  sha256 "82397216bd9a362d134a5e190764e5a5233f9feb850c04f5fc60dd682595dbc1"
 
   def install
     bin.install "gitleaks-darwin-amd64" => "gitleaks"
