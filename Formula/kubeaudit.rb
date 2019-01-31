@@ -7,9 +7,13 @@ class Kubeaudit < Formula
 
   def install
     bin.install "kubeaudit"
+    bin.install_symlink "kubeaudit" => "kubectl-audit"
   end
 
   def caveats; <<~EOS
+    kubeaudit is also installed as a kubectl plugin.
+    $ kubectl audit
+
     This is not the official Formula from the creator of `kubeaudit`. It is only for my personal
     use until Shopify provides a official Formula.
     In the meantime jump over to github and star the repository.
