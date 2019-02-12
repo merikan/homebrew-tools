@@ -19,8 +19,8 @@
    ```bash
    $ brew audit --strict --online gitleaks
    ```
-1. Edit the formula
-   Update the url and version. We will let homebrew help us with the checksum.
+1. Edit the formula   
+   Update the url and version. We will let homebrew help us calculate the checksum.
    ```bash
    $ brew edit gitleaks
    ````
