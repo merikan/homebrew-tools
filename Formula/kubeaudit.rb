@@ -1,9 +1,9 @@
 class Kubeaudit < Formula
   desc "Audit your Kubernetes clusters against common security controls"
   homepage "https://github.com/Shopify/kubeaudit"
-  url "https://github.com/Shopify/kubeaudit/releases/download/v0.5.0/kubeaudit_0.5.0_darwin_amd64.tar.gz"
-  version "0.5.0"
-  sha256 "7972073c62166d5d76b405c53618580a8b4380e98d0fbf1d3d8b15ee00b75b53"
+  url "https://github.com/Shopify/kubeaudit/releases/download/v0.6.0/kubeaudit_0.6.0_darwin_amd64.tar.gz"
+  version "0.6.0"
+  sha256 "c50d915b3dff6965453b99b87b3b9b2e3cbb94068f6bdc59005c8d40c23ad093"
 
   def install
     bin.install "kubeaudit"
