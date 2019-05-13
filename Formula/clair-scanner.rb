@@ -1,9 +1,9 @@
 class ClairScanner < Formula
   desc "Docker containers vulnerability scan"
   homepage "https://github.com/arminc/clair-scanner"
-  url "https://github.com/arminc/clair-scanner/releases/download/v8/clair-scanner_darwin_amd64"
-  version "8"
-  sha256 "dfd11e87097c952f8340a86fa90d156fb33e9b7e4cd68bb433461ebe9e791528"
+  url "https://github.com/arminc/clair-scanner/releases/download/v10/clair-scanner_darwin_amd64"
+  version "10"
+  sha256 "c66442ecc224db1221008d628d10c59b946d83f52f6ff1cbe7caa5274d55e108"
 
   def install
     bin.install "clair-scanner_darwin_amd64" => "clair-scanner"
