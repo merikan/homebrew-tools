@@ -3,7 +3,6 @@
 This is my homebrew tap where I'm brewing some nice tools for easy installation with [Homebrew](https://brew.sh/)
 
 - [clair-scanner](#clair-scanner) - scan Docker containers for vulnerabilities
-- [gitleaks](#gitleaks) - find unencrypted secrets and other unwanted data types in git
 - [jsonui](#jsonui) - interactive JSON explorer on your command line
 - [kubeaudit](#kubeaudit) - audit your Kubernetes clusters against common security controls
 
@@ -21,20 +20,6 @@ Jump over to github and read more about [clair-scanner](https://github.com/armin
 brew tap merikan/tools
 # install
 brew install clair-scanner
-```
-
-## gitleaks
-Gitleaks provides a way for you to find unencrypted secrets and other unwanted data types in git source code repositories.
-Jump over to github and read more about [gitleaks](https://github.com/zricethezav/gitleaks) and don't forget star [the repository](https://github.com/zricethezav/gitleaks)
-
-> Note: This is **not** the official Formula from the creator of gitleaks. It is only for my personal use until Zachary provides a official Formula.
-
-### Install
-```bash
-# tap this tap
-brew tap merikan/tools
-# install
-brew install gitleaks
 ```
 
 ## jsonui
