@@ -1,5 +1,9 @@
 > Notes to myself
 
+- [How to update a Formula](#how-to-update-a-formula)
+- [How to migrate a formula](#how-to-migrate-a-formula)
+- [How to rename a formula](#how-to-rename-a-formula)
+
 # How to update a Formula
 
 > This is a note to myself how to update a 3d party formula. In the following case it is a small gem called gitleaks I am updating from version 1.22 to 1.23.
@@ -87,3 +91,59 @@
    $ git branch -d gitleaks
    $ git push
    ```
+
+# How to migrate a formula
+
+`gitleaks` was not in the `homebrew/core` tap so I brewed it in this tap. Now gitleaks is available in the core tap and the following example is how to move it from this tap to `homebrew/core` tap
+
+1. Cd into the tap
+   ```bash
+   $ cd  $(brew --repo merikan/tools)
+   ```
+1. Create a file called `tap_migrations.json` in the root of the repository.
+1. Add the formula name and the name of the new tap
+    ```
+    {
+      "gitleaks": "homebrew/core"
+    }
+    ```
+1. Delete the formula and any text referencing this formula
+1. Commit and push
+    ```
+    $ git add .
+    $ git commit -m "gitleaks: migrate to homebrew/core"
+    § git push
+    ```
+1. And update/upgrade
+    ```
+    $ brew update && brew upgrade
+    Already up-to-date.
+    ==> Upgrading 1 outdated packages:
+    gitleaks 1.24.0 -> 2.0.0
+    ==> Upgrading gitleaks
+    ==> Downloading https://homebrew.bintray.com/bottles/gitleaks-2.0.0.mojave.bottle.tar.gz
+    ==> Downloading from https://akamai.bintray.com/1c/1ce44002a739b7a76d7787bcbf392b2e615e3b553ddc4d29c38e68d16cd00549?__gda__=exp=1561057106~hmac=342264f4e14e4cb5c9765dab9a7bde6e7b1856a30188993b09dc43d65ffbfcff&response-content-disposition=
+    ######################################################################## 100.0%
+    ==> Pouring gitleaks-2.0.0.mojave.bottle.tar.gz
+    🍺  /usr/local/Cellar/gitleaks/2.0.0: 6 files, 17.7MB
+    ```
+
+# How to rename a formula
+1. Cd into the tap
+   ```bash
+   $ cd  $(brew --repo merikan/tools)
+   ```
+1. Rename the formula and any text referencing the formula
+1. Create a file called `formula_renames.json` in the root of this repository.
+1. Add the old and new name of the formula
+    ```
+    {
+      "oldformula": "newformula"
+    }
+    ```
+1. Commit and push
+    ```
+    $ git add .
+    $ git commit -m "oldformula: renamed to newformula"
+    § git push
+    ```

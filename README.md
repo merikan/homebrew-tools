@@ -6,7 +6,7 @@ This is my homebrew tap where I'm brewing some nice tools for easy installation 
 - [jsonui](#jsonui) - interactive JSON explorer on your command line
 - [kubeaudit](#kubeaudit) - audit your Kubernetes clusters against common security controls
 
-> [Notes to myself how to upgrade a third party Formula](update_formula.md)
+> [Notes to myself](notes.md)
 
 ## clair-scanner
 clair-scanner enables scanning local docker images against [Clair](https://github.com/coreos/clair), a Vulnerability Static Analyzer for Containers.
@@ -16,10 +16,7 @@ Jump over to github and read more about [clair-scanner](https://github.com/armin
 
 ### Install
 ```bash
-# tap this tap
-brew tap merikan/tools
-# install
-brew install clair-scanner
+brew install merikan/tools/clair-scanner
 ```
 
 ## jsonui
@@ -30,10 +27,7 @@ Jump over to github and read more about [jsonui](https://github.com/gulyasm/json
 
 ### Install
 ```bash
-# tap this tap
-brew tap merikan/tools
-# install
-brew install jsonui
+brew install merikan/tools/jsonui
 ```
 
 ## kubeaudit
@@ -44,10 +38,7 @@ Jump over to github and read more about [kubeaudit](https://github.com/Shopify/k
 
 ### Install
 ```bash
-# tap this tap
-brew tap merikan/tools
-# install
-brew install kubeaudit
+brew install merikan/tools/kubeaudit
 ```
 
 ## License
