@@ -99,8 +99,8 @@
    $ git commit -m "kind: 0.4.0"
    $ git checkout master
    $ git merge master kind
-   $ git branch -d kind
    $ git push
+   $ git branch -d kind
    ```
 
 
@@ -189,8 +189,8 @@
    $ git commit -m "gitleaks: 1.23.0"
    $ git checkout master
    $ git merge master gitleaks
-   $ git branch -d gitleaks
    $ git push
+   $ git branch -d gitleaks
    ```
 
 # How to migrate a formula
