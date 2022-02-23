@@ -1,27 +1,36 @@
 > Notes to myself
 
+- [How to use your own Taps](#how-to-use-your-own-taps)
 - [How to create a Formula](#how-to-create-a-formula)
 - [How to update a Formula](#how-to-update-a-formula)
 - [How to migrate a formula](#how-to-migrate-a-formula)
 - [How to rename a formula](#how-to-rename-a-formula)
 
+# How to use your own Taps
+You can find information about brewing your own taps at [Taps (Third-Party Repositories)](https://docs.brew.sh/Taps)
 
 # How to create a Formula
-> This is a note to myself how to create a 3d party formula. In the following case it is a small gem called kind. 
-1. Update homebrew
+> This is a note to myself how to create a 3d party formula.
+> In the following case I will brew a formula for a small gem called `kind`.
+1. Create a repository on github with the prefix `homebrew` in my case it is `merikan/homebrew-tools`
+1. Add the tap to your environment
+   ```bash
+   $ brew tap merikan/tools
+   ```
+2. Update homebrew
    ```bash
    $ brew update && brew upgrade
    ```
-1. Cd into the tap
+3. Cd into the tap
    ```bash
    $ cd  $(brew --repo merikan/tools)
    ```
-1. Checkout a new branch (kind) to work in
+4. Create a new branch (kind) to work in
     ```bash
     $ git checkout -b kind
     ```
-1. Create the formula
-    We will use the `brew create` command with a URL to the binary and using the opetion `--tap`.
+5. Create the formula
+    We will use the `brew create` command with a URL to the binary and using the option `--tap`.
     ```bash
     $ brew create https://github.com/kubernetes-sigs/kind/releases/download/v0.4.0/kind-darwin-amd64 —-tap merikan/homebrew-tools
     ==> Downloading https://github.com/kubernetes-sigs/kind/releases/download/v0.4.0/kind-darwin-amd64
@@ -35,7 +44,7 @@
     ```
     Homebrew will download the binary and try to populate `desc`, `homepage`, `url`, `version` and `sha256` and then open the Formula in your default editor. Make sure it’s created in the right directory, in my case it is  `/usr/local/Homebrew/Library/Taps/merikan/homebrew-tools/Formula`
     Now edit the the formula and save it.
-1.  This is the formula after editing
+6.  This is the formula after editing
     ```bash
     class Kind < Formula
       desc "Kubernetes IN Docker - local clusters for testing Kubernetes"
@@ -63,13 +72,13 @@
       end
     end
     ```
-1.  lint the formula and fix any error
+7.  lint the formula and fix any error
     ```bash
     $ brew audit --strict --online kind
     ```
-1.  Install the formula
+8.  Install the formula
     ```bash
-    $ brew install kind
+    $ brew install merikan/tools/kind
     Updating Homebrew...
     ==> Auto-updated Homebrew!
     Updated 1 tap (homebrew/cask).
@@ -86,28 +95,26 @@
 
     Kudos to Kubernetes Team for creating kind. https://kubernetes.io/
     ==> Summary
-    🍺  /usr/local/Cellar/kind/0.4.0: 3 files, 34.4MB, built in 6 seconds    
+    🍺  /usr/local/Cellar/kind/0.4.0: 3 files, 34.4MB, built in 6 seconds
     ```
-1. Run the tests
+9.  Run the tests
    ```bash
    $ brew test kind
    ```
-1. Now run the formula and make sure everything works ok.
-1. Commit, merge and push the changes
+11. Now run the formula and make sure everything works ok.
+12. Commit, merge and push the changes
    ```bash
    $ git add .
    $ git commit -m "kind: 0.4.0"
-   $ git checkout master
-   $ git merge master kind
+   $ git checkout main
+   $ git merge main kind
    $ git push
    $ git branch -d kind
    ```
 
-
-
 # How to update a Formula
-
-> This is a note to myself how to update a 3d party formula. In the following case it is a small gem called gitleaks I am updating from version 1.22 to 1.23.
+> This is a note to myself how to update a 3d party formula.
+> In the following case it is a small gem called `gitleaks` I am updating from version 1.22 to 1.23.
 1. Update homebrew
    ```bash
    $ brew update && brew upgrade
@@ -124,7 +131,7 @@
    ```bash
    $ brew audit --strict --online gitleaks
    ```
-1. Edit the formula   
+1. Edit the formula
    Update the url and version. We will let homebrew help us calculate the checksum.
    ```bash
    $ brew edit gitleaks
@@ -187,14 +194,13 @@
    ```bash
    $ git add .
    $ git commit -m "gitleaks: 1.23.0"
-   $ git checkout master
-   $ git merge master gitleaks
+   $ git switch main
+   $ git merge main gitleaks
    $ git push
    $ git branch -d gitleaks
    ```
 
 # How to migrate a formula
-
 `gitleaks` was not in the `homebrew/core` tap so I brewed it in this tap. Now gitleaks is available in the core tap and the following example is how to move it from this tap to `homebrew/core` tap
 
 1. Cd into the tap
