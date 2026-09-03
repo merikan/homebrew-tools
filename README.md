@@ -2,6 +2,7 @@
 
 This is my homebrew tap where I'm brewing some nice tools for easy installation with [Homebrew](https://brew.sh/)
 
+- [guitar](https://github.com/asinglebit/guitar) A git client with fast topological & chronological graph rendering
 - [clair-scanner](#clair-scanner) - scan Docker containers for vulnerabilities
 - [gdu-go](#gdu-go) - fast disk usage analyzer with console interface
 - [jsonui](#jsonui) - interactive JSON explorer on your command line
@@ -9,6 +10,20 @@ This is my homebrew tap where I'm brewing some nice tools for easy installation 
 - [super-hacker](#super-hacker) - SuperHacker make you look like a hacker
 
 > How to create and update my personal formulas can be found here 👉 [Notes to myself](notes.md)
+
+## guitar
+
+[guitar](https://github.com/asinglebit/guitar) is a terminal based git client with fast topological & chronological graph rendering
+Jump over to github and read more about [guitar](https://github.com/asinglebit/guitar) and don't forget star [the repository](https://github.com/asinglebit/guitar)
+
+> Note: This is **not** the official Formula from the creator of guitar. It is only for my personal use until Gasimov.Abdulali provides a official Formula.
+
+I took the liberty of also creating an alias named "gitr", it felt appropriate.
+
+### Install
+```bash
+brew install merikan/tools/guitar
+```
 
 ## clair-scanner
 clair-scanner enables scanning local docker images against [Clair](https://github.com/coreos/clair), a Vulnerability Static Analyzer for Containers.   

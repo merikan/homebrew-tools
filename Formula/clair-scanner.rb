@@ -1,4 +1,4 @@
-<M-D-G><M-D-T><M-D-X><M-S-D-5><M-S-D-6>
+class ClairScanner < Formula
   desc 'Docker containers vulnerability scan'
   homepage 'https://github.com/arminc/clair-scanner'
   url 'https://github.com/arminc/clair-scanner/releases/download/v10/clair-scanner_darwin_amd64'
