@@ -1,6 +1,7 @@
 cask "sagascript" do
-  version "1.0.9"
-  sha256 "4133f351f793477174654ac40bd37932035e1c8e5cae9e2cc168e47dc21d51ec"
+  version "1.1.3"
+  sha256 "608280fa79810f2e844455b45343a3e4026d96afb1bcfcf85179eaa7f6c9cdf4"
+
 
   url "https://github.com/Magnus-Gille/sagascript/releases/download/v#{version}/Sagascript.dmg"
   name "Sagascript App"
