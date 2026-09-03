@@ -2,6 +2,7 @@
 
 This is my homebrew tap where I'm brewing some nice tools for easy installation with [Homebrew](https://brew.sh/)
 
+- [Sagascript](https://github.com/Magnus-Gille/sagascript) Push-to-talk transcription with local Whisper models.
 - [guitar](https://github.com/asinglebit/guitar) A git client with fast topological & chronological graph rendering
 - [clair-scanner](#clair-scanner) - scan Docker containers for vulnerabilities
 - [gdu-go](#gdu-go) - fast disk usage analyzer with console interface
@@ -10,6 +11,21 @@ This is my homebrew tap where I'm brewing some nice tools for easy installation 
 - [super-hacker](#super-hacker) - SuperHacker make you look like a hacker
 
 > How to create and update my personal formulas can be found here 👉 [Notes to myself](notes.md)
+
+## Sagascript
+
+[Sagascript](https://github.com/Magnus-Gille/sagascript) is a low-latency, privacy-first dictation for macOS. Push-to-talk transcription with local Whisper models.
+
+I wrote a blog post about Sagascript. [Just talk to your agent | Callista](https://callistaenterprise.se/blogg/teknik/2026/08/25/push-and-talk/)
+Jump over to github and read more about [Sagascript](https://github.com/Magnus-Gille/sagascript) and don't forget star [the repository](https://github.com/Magnus-Gille/sagascript)
+
+> Note: This is **not** the official Cask from the creator of Sagascript. It is only for my personal use until Magnus Gille provides a official Cask.
+
+### install
+```bash
+brew install --cask merikan/tools/sagascript 
+
+```
 
 ## guitar
 
