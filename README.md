@@ -2,8 +2,11 @@
 
 This is my homebrew tap where I'm brewing some nice tools for easy installation with [Homebrew](https://brew.sh/)
 
-- [Sagascript](https://github.com/Magnus-Gille/sagascript) Push-to-talk transcription with local Whisper models.
-- [guitar](https://github.com/asinglebit/guitar) A git client with fast topological & chronological graph rendering
+Most of the tools packaged here aren't available as standalone packages, which is why I've packaged them myself.
+
+- [Buzz](#buzz) A workspace where humans and agents build together, on a relay you own.
+- [Sagascript](#sagascript) Push-to-talk transcription with local Whisper models.
+- [guitar](#guitar) A git client with fast topological & chronological graph rendering
 - [clair-scanner](#clair-scanner) - scan Docker containers for vulnerabilities
 - [gdu-go](#gdu-go) - fast disk usage analyzer with console interface
 - [jsonui](#jsonui) - interactive JSON explorer on your command line
@@ -12,11 +15,24 @@ This is my homebrew tap where I'm brewing some nice tools for easy installation 
 
 > How to create and update my personal formulas can be found here 👉 [Notes to myself](notes.md)
 
+## Buzz
+
+[buzz](https://github.com/block/buzz) - A workspace, using the hive mind communication platform, where humans and agents build together, on a relay you own.
+Jump over to github and read more about [buzz](https://github.com/block/buzz) and don't forget star [the repository](https://github.com/Magnus-Gille/sagascript)
+
+> Note: This is **not** the official Cask from the creator of `buzz`. It is only for my personal use until block provides a official Cask.
+
+### install
+```bash
+brew install --cask merikan/tools/buzz
+
+```
+
 ## Sagascript
 
 [Sagascript](https://github.com/Magnus-Gille/sagascript) is a low-latency, privacy-first dictation for macOS. Push-to-talk transcription with local Whisper models.
 
-I wrote a blog post about Sagascript. [Just talk to your agent | Callista](https://callistaenterprise.se/blogg/teknik/2026/08/25/push-and-talk/)
+I wrote a blog post about Sagascript, [Just talk to your agent](https://callistaenterprise.se/blogg/teknik/2026/08/25/push-and-talk/)
 Jump over to github and read more about [Sagascript](https://github.com/Magnus-Gille/sagascript) and don't forget star [the repository](https://github.com/Magnus-Gille/sagascript)
 
 > Note: This is **not** the official Cask from the creator of Sagascript. It is only for my personal use until Magnus Gille provides a official Cask.
@@ -62,7 +78,7 @@ Jump over to github and read more about [gdu](https://github.com/dundee/gdu) and
 
 ### Install
 ```bash
-brew install merikan/tools/jsonui
+brew install merikan/tools/gdu-go
 ```
 
 ## jsonui
