@@ -2,8 +2,8 @@
 
 # this is the top-level documentation comment for
 cask 'sagascript' do
-  version '1.4.2'
-  sha256 '5762798cc3599ca4fc86b8409d391b5cb5eb35c4f1b05dd9c8aff6120eee7e7f'
+  version '1.4.3'
+  sha256 'f6acbd3ad4c641e0076d187477d08ab93a3f61455b5ee61b9f65440cee8f43a0'
 
   url "https://github.com/Magnus-Gille/sagascript/releases/download/v#{version}/Sagascript.dmg"
   name 'Sagascript App'
