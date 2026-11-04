@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-# this is the top-level documentation comment for
+# https://github.com/Magnus-Gille/sagascript/releases
 cask 'sagascript' do
-  version '1.4.6'
-  sha256 '0d801fe7faa91bba72db253aacc3b47517f83391fa0f965eae49faa8a532e051'
+  version '1.4.7'
+  sha256 'f170cd5a423c17fe4b24c2e6d3499a66b8aaa1caee13ecac62dd7edffb0735c4'
 
   url "https://github.com/Magnus-Gille/sagascript/releases/download/v#{version}/Sagascript.dmg"
   name 'Sagascript App'
